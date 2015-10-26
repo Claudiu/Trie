@@ -11,10 +11,10 @@ https://en.wikipedia.org/wiki/Trie
 ## Usage
 
 You start by defining the root of the Trie. Using ```trie.NewTrie()```
-```golang
+```go
 package main
 
-import "github.com/claudiu/go-trie"
+import "github.com/claudiu/trie"
 
 func main() {
     rootTrie := trie.NewTrie()
@@ -27,7 +27,7 @@ func main() {
 ```
 
 You can now return the trie node using:
-```golang
+```go
 rootTrie.Find("heart")
 ```
 
@@ -36,18 +36,18 @@ If the node is not found ```rootTrie.Find("heart")``` will return _nil_
 
 ### Word Count
 You can return the word count in a trie using:
-```golang
+```go
 rootTrie.Count()
 ```
 
 ### Metadata
 Each Trie node can hold metadata. Here's a small demo:
 
-```golang
+```go
 package main
 
 import (
-    "github.com/claudiu/go-trie"
+    "github.com/claudiu/trie"
     "fmt"
 )
 
