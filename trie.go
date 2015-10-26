@@ -45,6 +45,20 @@ func (tr *Trie) addChild(a rune) *Trie {
 	return nw
 }
 
+// Count returns the number of words in a trie.
+func (tr *Trie) Count() int {
+	count := 0
+	for _, child := range tr.children {
+		if child.isLeaf == true {
+			count++
+		}
+
+		count += child.Count()
+	}
+
+	return count
+}
+
 // Add a word to a trie
 func (tr *Trie) Add(word string) *Trie {
 	letters, node, i := []rune(word), tr, 0

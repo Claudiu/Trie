@@ -72,6 +72,21 @@ func TestFindNode(t *testing.T) {
 	}
 }
 
+func TestCountWords(t *testing.T) {
+	rootTrie := trie.NewTrie()
+	rootTrie.Add("ab")
+	rootTrie.Add("abc")
+	rootTrie.Add("abcd")
+	rootTrie.Add("abcdefg")
+
+	rootTrie.Add("zoidberg")
+	rootTrie.Add("iceberg")
+
+	if rootTrie.Count() != 6 {
+		t.Fail()
+	}
+}
+
 func TestMetaData(t *testing.T) {
 	rootTrie := trie.NewTrie()
 	rootTrie.Add("heart")
