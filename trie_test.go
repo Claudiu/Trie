@@ -3,7 +3,7 @@ package trie_test
 import (
 	"testing"
 
-	"github.com/claudiu/go-trie"
+	"github.com/claudiu/trie"
 )
 
 func TestAddAndFind(t *testing.T) {
