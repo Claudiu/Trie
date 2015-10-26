@@ -31,6 +31,13 @@ rootTrie.Find("heart")
 
 If the node is not found ```rootTrie.Find("heart")``` will return _nil_
 
+
+### Word Count
+You can return the word count in a trie using:
+```
+rootTrie.Count()
+```
+
 ### Metadata
 Each Trie node can hold metadata. Here's a small demo:
 
